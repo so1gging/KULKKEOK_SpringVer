@@ -3,88 +3,97 @@ package com.mvc.kulkkeok.model.dto;
 import java.util.Date;
 
 	public class MoimDto{
-		private int moimNo;
-		private String moimTitle;
-		private String userId;
-		private String categoryNo;
-		private String moimContent;
-		private java.sql.Date moimWriteDate; //작성날짜
-		private java.sql.Date moimDate; //모임일자
+		private int moim_no;
+		private String moim_title;
+		private String moim_content;
+		private java.sql.Date moim_writedate; //작성날짜
+		private java.sql.Date moim_date; //모임일자
+		private String moim_placename;
+		private String moim_placeadd;
+		private String category_code;
 		private String moimStatus; //종료여부
-		private String moimPlaceName;
-		private String moimPlaceAdd;
+		private String user_id;
    
 		public MoimDto() {}
 
-		public MoimDto(int moimNo, String moimTitle, String userId, String categoryNo, String moimContent, java.sql.Date moimWriteDate,
-					java.sql.Date moimDate, String moimStatus, String moimPlaceName, String moimPlaceAdd) {
+		public MoimDto(int moim_no, String moim_title, String moim_content, java.sql.Date moim_writedate,
+				java.sql.Date moim_date, String moim_placename, String moim_placeadd, String category_code,
+				String moimStatus, String user_id) {
 			super();
-			this.moimNo = moimNo;
-			this.moimTitle = moimTitle;
-			this.userId = userId;
-			this.categoryNo = categoryNo;
-			this.moimContent = moimContent;
-			this.moimWriteDate = moimWriteDate;
-			this.moimDate = moimDate;
+			this.moim_no = moim_no;
+			this.moim_title = moim_title;
+			this.moim_content = moim_content;
+			this.moim_writedate = moim_writedate;
+			this.moim_date = moim_date;
+			this.moim_placename = moim_placename;
+			this.moim_placeadd = moim_placeadd;
+			this.category_code = category_code;
 			this.moimStatus = moimStatus;
-			this.moimPlaceName = moimPlaceName;
-			this.moimPlaceAdd = moimPlaceAdd;
+			this.user_id = user_id;
 		}
 
-		public int getMoimNo() {
-			return moimNo;
+		public int getMoim_no() {
+			return moim_no;
 		}
 
-		public void setMoimNo(int moimNo) {
-			this.moimNo = moimNo;
+		public void setMoim_no(int moim_no) {
+			this.moim_no = moim_no;
 		}
 
-		public String getMoimTitle() {
-			return moimTitle;
+		public String getMoim_title() {
+			return moim_title;
 		}
 
-		public void setMoimTitle(String moimTitle) {
-			this.moimTitle = moimTitle;
+		public void setMoim_title(String moim_title) {
+			this.moim_title = moim_title;
 		}
 
-		public String getUserId() {
-			return userId;
+		public String getMoim_content() {
+			return moim_content;
 		}
 
-		public void setUserId(String userId) {
-			this.userId = userId;
+		public void setMoim_content(String moim_content) {
+			this.moim_content = moim_content;
 		}
 
-		public String getCategoryNo() {
-			return categoryNo;
+		public java.sql.Date getMoim_writedate() {
+			return moim_writedate;
 		}
 
-		public void setCategoryNo(String categoryNo) {
-			this.categoryNo = categoryNo;
+		public void setMoim_writedate(java.sql.Date moim_writedate) {
+			this.moim_writedate = moim_writedate;
 		}
 
-		public String getMoimContent() {
-			return moimContent;
+		public java.sql.Date getMoim_date() {
+			return moim_date;
 		}
 
-		public void setMoimContent(String moimContent) {
-			this.moimContent = moimContent;
+		public void setMoim_date(java.sql.Date moim_date) {
+			this.moim_date = moim_date;
 		}
 
-		public Date getMoimWriteDate() {
-			return moimWriteDate;
+		public String getMoim_placename() {
+			return moim_placename;
 		}
 
-		public void setMoimWriteDate(java.sql.Date moimWriteDate) {
-			this.moimWriteDate = moimWriteDate;
+		public void setMoim_placename(String moim_placename) {
+			this.moim_placename = moim_placename;
 		}
 
-		public java.sql.Date getMoimDate() {
-			return moimDate;
+		public String getMoim_placeadd() {
+			return moim_placeadd;
 		}
 
-		public void setMoimDate(java.sql.Date moimDate) {
-			this.moimDate = moimDate;
+		public void setMoim_placeadd(String moim_placeadd) {
+			this.moim_placeadd = moim_placeadd;
+		}
+
+		public String getCategory_code() {
+			return category_code;
+		}
+
+		public void setCategory_code(String category_code) {
+			this.category_code = category_code;
 		}
 
 		public String getMoimStatus() {
@@ -95,22 +104,23 @@ import java.util.Date;
 			this.moimStatus = moimStatus;
 		}
 
-		public String getMoimPlaceName() {
-			return moimPlaceName;
+		public String getUser_id() {
+			return user_id;
 		}
 
-		public void setMoimPlaceName(String moimPlaceName) {
-			this.moimPlaceName = moimPlaceName;
+		public void setUser_id(String user_id) {
+			this.user_id = user_id;
 		}
 
-		public String getMoimPlaceAdd() {
-			return moimPlaceAdd;
+		@Override
+		public String toString() {
+			return "MoimDto [moim_no=" + moim_no + ", moim_title=" + moim_title + ", moim_content=" + moim_content
+					+ ", moim_writedate=" + moim_writedate + ", moim_date=" + moim_date + ", moim_placename="
+					+ moim_placename + ", moim_placeadd=" + moim_placeadd + ", category_code=" + category_code
+					+ ", moimStatus=" + moimStatus + ", user_id=" + user_id + "]";
 		}
 
-		public void setMoimPlaceAdd(String moimPlaceAdd) {
-			this.moimPlaceAdd = moimPlaceAdd;
-		}
-   
+		
    
    
 }

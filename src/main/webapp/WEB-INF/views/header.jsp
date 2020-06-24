@@ -147,7 +147,7 @@
 	                                            <a class="dropdown-item" href="mypage.do?command=myBookmark">북마크 보기</a>
 	                                            <a class="dropdown-item" href="mypage.do?command=myReview">내가 쓴 리뷰</a>
 	                                            <a class="dropdown-item" href="mypage.do?command=myMoim">내 모임 보기</a>
-	                                            <c:if test="${user.userId eq 'ADMIN' }">
+	                                            <c:if test="${user.user_id eq 'ADMIN' }">
 	                                            	<a class="dropdown-item" href="admin.do?command=userMng">관리자 페이지</a>
 	                                            </c:if>
 	                                            <a class="dropdown-item" href="mypage.do?command=unsubscrilbe">탈퇴하기</a>
@@ -158,7 +158,7 @@
                             </div>
                             <c:choose>
                             	<c:when test="${empty user }">
-		                            <a href="#" class="btn_1 d-none d-lg-block" onclick="location.href='login.do?command=loginPage'">LOG IN</a>
+		                            <a href="#" class="btn_1 d-none d-lg-block" onclick="location.href='loginPage.do'">LOG IN</a>
                             	</c:when>
                             	<c:otherwise>
                             		<a href="#" class="btn_1 d-none d-lg-block" onclick="location.href='login.do?command=logout'">LOGOUT</a>

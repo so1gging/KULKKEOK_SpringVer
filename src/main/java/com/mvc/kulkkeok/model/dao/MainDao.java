@@ -7,7 +7,7 @@ import com.mvc.kulkkeok.model.dto.RecentReviewDto;
 
 public interface MainDao {
 	
-	String namespace="mapper.main.";
+	String NAMESPACE="mapper.main.";
 	
 	public List<BestbeerDto> bestStar();
 	public List<BestbeerDto> countReview();

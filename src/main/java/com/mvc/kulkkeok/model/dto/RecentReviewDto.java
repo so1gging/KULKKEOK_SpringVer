@@ -3,75 +3,80 @@ package com.mvc.kulkkeok.model.dto;
 import java.util.Date;
 
 public class RecentReviewDto {
-	private String userId;
-	private String reviewContent;
-	private String reviewStar;
-	private String beerKorName;
-	private Date reviewDate;
-	private int beerNo;
+	private String user_id;
+	private String review_content;
+	private String review_star;
+	private String beer_kor_name;
+	private Date review_date;
+	private int beer_no;
 	
 	public RecentReviewDto() {}
 
-	public RecentReviewDto(String userId, String reviewContent, String reviewStar, String beerKorName,
-			Date reviewDate) {
+	public RecentReviewDto(String user_id, String review_content, String review_star, String beer_kor_name,
+			Date review_date, int beer_no) {
 		super();
-		this.userId = userId;
-		this.reviewContent = reviewContent;
-		this.reviewStar = reviewStar;
-		this.beerKorName = beerKorName;
-		this.reviewDate = reviewDate;
-		this.beerNo = beerNo;
+		this.user_id = user_id;
+		this.review_content = review_content;
+		this.review_star = review_star;
+		this.beer_kor_name = beer_kor_name;
+		this.review_date = review_date;
+		this.beer_no = beer_no;
 	}
 
-	public String getUserId() {
-		return userId;
+	public String getUser_id() {
+		return user_id;
 	}
 
-	public void setUserId(String userId) {
-		this.userId = userId;
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
 	}
 
-	public String getReviewContent() {
-		return reviewContent;
+	public String getReview_content() {
+		return review_content;
 	}
 
-	public void setReviewContent(String reviewContent) {
-		this.reviewContent = reviewContent;
+	public void setReview_content(String review_content) {
+		this.review_content = review_content;
 	}
 
-	public String getReviewStar() {
-		return reviewStar;
+	public String getReview_star() {
+		return review_star;
 	}
 
-	public void setReviewStar(String reviewStar) {
-		this.reviewStar = reviewStar;
+	public void setReview_star(String review_star) {
+		this.review_star = review_star;
 	}
 
-	public String getBeerKorName() {
-		return beerKorName;
+	public String getBeer_kor_name() {
+		return beer_kor_name;
 	}
 
-	public void setBeerKorName(String beerKorName) {
-		this.beerKorName = beerKorName;
+	public void setBeer_kor_name(String beer_kor_name) {
+		this.beer_kor_name = beer_kor_name;
 	}
 
-	public Date getReviewDate() {
-		return reviewDate;
+	public Date getReview_date() {
+		return review_date;
 	}
 
-	public void setReviewDate(Date reviewDate) {
-		this.reviewDate = reviewDate;
+	public void setReview_date(Date review_date) {
+		this.review_date = review_date;
 	}
-	
-	public int getBeerNo() {
-		return beerNo;
+
+	public int getBeer_no() {
+		return beer_no;
 	}
-	
-	public void setBeerNo(int beerNo) {
-		this.beerNo = beerNo;
+
+	public void setBeer_no(int beer_no) {
+		this.beer_no = beer_no;
 	}
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "RecentReviewDto [user_id=" + user_id + ", review_content=" + review_content + ", review_star="
+				+ review_star + ", beer_kor_name=" + beer_kor_name + ", review_date=" + review_date + ", beer_no="
+				+ beer_no + "]";
+	}
+
 
 }

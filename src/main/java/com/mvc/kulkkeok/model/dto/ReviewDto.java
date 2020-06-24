@@ -5,106 +5,94 @@ import java.util.Date;
 
 public class ReviewDto {
 
-   private int reviewNo;              //리뷰번호
-   private String reviewContent;      //리뷰내용
-   private Date reviewDate;           //작성일자
-   private int reviewStar;            //리뷰별점
-   private String userId;             //리뷰작성자
-   private int beerNo;                //맥주번호
+   private int review_no;              //리뷰번호
+   private String review_content;      //리뷰내용
+   private Date review_date;           //작성일자
+   private int review_star;            //리뷰별점
+   private String user_id;             //리뷰작성자
+   private int beer_no;                //맥주번호
    
    
    public ReviewDto() {}
 
-   
-   //리뷰 작성
-   public ReviewDto(String reviewContent, int reviewStar , String userId, int beerNo) {
-	   this.reviewContent = reviewContent;
-	   this.reviewStar = reviewStar;
-	   this.userId = userId;
-	   this.beerNo = beerNo;
-   }
-   
-   //리뷰 수정
-   public ReviewDto(int reviewNo, String reviewContent) {
-	   this.reviewNo = reviewNo;
-	   this.reviewContent = reviewContent;
-   }
 
-   public ReviewDto(int reviewNo, String reviewContent, Date reviewDate, int reviewStar, String userId, int beerNo) {
-      super();
-      this.reviewNo = reviewNo;
-      this.reviewContent = reviewContent;
-      this.reviewDate = reviewDate;
-      this.reviewStar = reviewStar;
-      this.userId = userId;
-      this.beerNo = beerNo;
-   }
-
-
-   public ReviewDto(String content) {
-	   this.reviewContent = content;
+public ReviewDto(int review_no, String review_content, Date review_date, int review_star, String user_id, int beer_no) {
+	super();
+	this.review_no = review_no;
+	this.review_content = review_content;
+	this.review_date = review_date;
+	this.review_star = review_star;
+	this.user_id = user_id;
+	this.beer_no = beer_no;
 }
 
 
-public int getReviewNo() {
-      return reviewNo;
-   }
+public int getReview_no() {
+	return review_no;
+}
 
 
-   public void setReviewNo(int reviewNo) {
-      this.reviewNo = reviewNo;
-   }
+public void setReview_no(int review_no) {
+	this.review_no = review_no;
+}
 
 
-   public String getReviewContent() {
-      return reviewContent;
-   }
+public String getReview_content() {
+	return review_content;
+}
 
 
-   public void setReviewContent(String reviewContent) {
-      this.reviewContent = reviewContent;
-   }
+public void setReview_content(String review_content) {
+	this.review_content = review_content;
+}
 
 
-   public Date getReviewDate() {
-      return reviewDate;
-   }
+public Date getReview_date() {
+	return review_date;
+}
 
 
-   public void setReviewDate(Date reviewDate) {
-      this.reviewDate = reviewDate;
-   }
+public void setReview_date(Date review_date) {
+	this.review_date = review_date;
+}
 
 
-   public int getReviewStar() {
-      return reviewStar;
-   }
+public int getReview_star() {
+	return review_star;
+}
 
 
-   public void setReviewStar(int reviewStar) {
-      this.reviewStar = reviewStar;
-   }
+public void setReview_star(int review_star) {
+	this.review_star = review_star;
+}
 
 
-   public String getUserId() {
-      return userId;
-   }
+public String getUser_id() {
+	return user_id;
+}
 
 
-   public void setUserId(String userId) {
-      this.userId = userId;
-   }
+public void setUser_id(String user_id) {
+	this.user_id = user_id;
+}
 
 
-   public int getBeerNo() {
-      return beerNo;
-   }
+public int getBeer_no() {
+	return beer_no;
+}
 
 
-   public void setBeerNo(int beerNo) {
-      this.beerNo = beerNo;
-   }   
-   
+public void setBeer_no(int beer_no) {
+	this.beer_no = beer_no;
+}
+
+
+@Override
+public String toString() {
+	return "ReviewDto [review_no=" + review_no + ", review_content=" + review_content + ", review_date=" + review_date
+			+ ", review_star=" + review_star + ", user_id=" + user_id + ", beer_no=" + beer_no + "]";
+}
+
    
    
    

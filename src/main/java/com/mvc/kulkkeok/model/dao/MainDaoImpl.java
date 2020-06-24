@@ -25,7 +25,7 @@ public class MainDaoImpl implements MainDao{
 		logger.info("[ MainDao : bestStar ]");
 		List<BestbeerDto> res = new ArrayList<BestbeerDto>();
 		try {
-			res = sqlSession.selectList(namespace+"bestStarSql");
+			res = sqlSession.selectList(NAMESPACE+"bestStarSql");
 		
 		} catch (Exception e) {
 			logger.info("[ MainDao : error ]");
@@ -40,14 +40,36 @@ public class MainDaoImpl implements MainDao{
 
 	@Override
 	public List<BestbeerDto> countReview() {
-		// TODO Auto-generated method stub
-		return null;
+		logger.info("[ MainDao : countReview ]");
+		List<BestbeerDto> res = new ArrayList<BestbeerDto>();
+		
+		try {
+			res = sqlSession.selectList(NAMESPACE+"countReviewSql");
+		
+		} catch (Exception e) {
+			logger.info("[ MainDao : error ]");
+		}
+		
+		
+		for(BestbeerDto dto : res) {
+			dto.setIntStarAvg((int) dto.getStar_avg());
+		}
+		
+		return res;
 	}
 
 	@Override
 	public List<RecentReviewDto> getRecentReviewList() {
-		// TODO Auto-generated method stub
-		return null;
+		logger.info("[ MainDao : getRecentReviewList ]");
+		List<RecentReviewDto> res = new ArrayList<RecentReviewDto>();
+		
+		try {
+			res = sqlSession.selectList(NAMESPACE+"getRecentReviewlistSql");
+		} catch (Exception e) {
+			logger.info("[ MainDao : error ]");
+		}
+		
+		return res;
 	}
 
 }

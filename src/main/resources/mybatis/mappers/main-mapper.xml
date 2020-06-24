@@ -29,9 +29,9 @@
 		]]>
 	</select>
 	
-	<!--
 	
-	<select id="getRecentReviewlistSql" resultMap="RecentReviewList">
+	
+	<select id="getRecentReviewlistSql" resultType="RecentReviewDto">
 	<![CDATA[
 		SELECT * FROM (
 					SELECT USER_ID, REVIEW_CONTENT, REVIEW_STAR, BEER_KOR_NAME, REVIEW_DATE, BEER_NO, ROW_NUMBER() OVER(ORDER BY REVIEW_DATE DESC) RR
@@ -41,6 +41,6 @@
 		WHERE RR<6
 	]]>
 	</select>
-	-->
+
 		
 </mapper>

@@ -78,7 +78,7 @@
             <div class="row">
                <c:choose>
                   <c:when test="${empty bestStar }">
-                     순위가 존재하지 않습니다.
+                     		순위가 존재하지 않습니다.
                   </c:when>
                   <c:otherwise>
                      <c:forEach var="bestStar" items="${bestStar }">
@@ -134,14 +134,14 @@
                      <c:forEach var="countReviews" items="${countReviews }">
                         
                          <div class="col-lg-6 col-md-6 rankimg" style="max-width: 30%;">
-                             <a href="beer.do?command=beerdetail&beerno=${countReviews.beerNo }">
-                                <img src="resources/img/beer/${countReviews.beerPic }.jpg" alt="">
+                             <a href="beer.do?command=beerdetail&beerno=${countReviews.beer_no }">
+                                <img src="resources/img/beer/${countReviews.beer_pic }.jpg" alt="">
                              </a>
                               <div class="hover_Text d-flex align-items-end justify-content-between">
                                   <div class="beer_align">
                                    <br>
-                                   <h3><a href="beer.do?command=beerdetail&beerno=${countReviews.beerNo }">${countReviews.beerKorName }</a></h3>
-                                   <p>${countReviews.beerAbv }%</p>
+                                   <h3><a href="beer.do?command=beerdetail&beerno=${countReviews.beer_no }">${countReviews.beer_kor_name }</a></h3>
+                                   <p>${countReviews.beer_abv }%</p>
                                    
                                    <div class="place_review">
                                       <c:forEach begin="1" end="${countReviews.intStarAvg }">
@@ -154,7 +154,7 @@
                                       </c:if>
                                    </div>
                                    
-                                <span>(${countReviews.countReview }개의 리뷰)</span>                             
+                                <span>(${countReviews.count_review }개의 리뷰)</span>                             
                             </div>
                         </div>
                 </div>
@@ -291,38 +291,38 @@
                         <c:forEach var="review" items="${review }">
                         
                                  <div class="single_review_slider" style="height:333px; text-align: center;">
-                                     <a href="beer.do?command=beerdetail&beerno=${review.beerNo }">
+                                     <a href="beer.do?command=beerdetail&beerno=${review.beer_no }">
                                         <h4 style="margin-top: 0px; margin-bottom: 15px; font-weight: bold; color: orangered; text-align:center;" >
-                                        <i style="color:white;" class="las la-beer la-2x"></i> ${review.beerKorName }</h4>
+                                        <i style="color:white;" class="las la-beer la-2x"></i> ${review.beer_kor_name }</h4>
                                       </a>
                                       
                                       <div class="place_review" style="text-align:center; margin: 0 auto;">
-                                         <c:forEach begin="1" end="${review.reviewStar }">
+                                         <c:forEach begin="1" end="${review.review_star }">
                                             <i class="fas fa-star checked"></i>
                                          </c:forEach>
-                                         <c:if test="${review.reviewStar ne 5 }">
-                                            <c:forEach begin="1" end="${5 - review.reviewStar }">
+                                         <c:if test="${review.review_star ne 5 }">
+                                            <c:forEach begin="1" end="${5 - review.review_star }">
                                                <i class="fas fa-star" style="color: #e0ded8;"></i>
                                             </c:forEach>
                                          </c:if>
                                       </div><br><br>
-                                      <div style="margin-top: 20px; margin-bottom: 10px; color: white; text-align:center; font-style: oblique;"><c:out value=" ${review.reviewContent } "></c:out></div><br><br>
+                                      <div style="margin-top: 20px; margin-bottom: 10px; color: white; text-align:center; font-style: oblique;"><c:out value=" ${review.review_content } "></c:out></div><br><br>
                                       
                                       <div class="place_review">
-                                         <c:if test="${review.reviewStar eq 1 }">
-                                               <h5 style="font-style: italic; color:lightblue;"> <i class="lar la-angry la-2x"></i> ${review.userId }</h5> <h5>(<fmt:formatDate value="${review.reviewDate }" pattern="yyyy-MM-dd HH:mm:ss"/>)</h5>
+                                         <c:if test="${review.review_star eq 1 }">
+                                               <h5 style="font-style: italic; color:lightblue;"> <i class="lar la-angry la-2x"></i> ${review.user_id }</h5> <h5>(<fmt:formatDate value="${review.review_date }" pattern="yyyy-MM-dd HH:mm:ss"/>)</h5>
                                          </c:if>
-                                         <c:if test="${review.reviewStar eq 2 }">
-                                           <h5 style="font-style: italic; color:lightblue;"> <i class="las la-grin-beam-sweat la-2x"></i> ${review.userId }</h5> <h5> (<fmt:formatDate value="${review.reviewDate }" pattern="yyyy-MM-dd HH:mm:ss"/>)</h5>
+                                         <c:if test="${review.review_star eq 2 }">
+                                           <h5 style="font-style: italic; color:lightblue;"> <i class="las la-grin-beam-sweat la-2x"></i> ${review.user_id }</h5> <h5> (<fmt:formatDate value="${review.review_date }" pattern="yyyy-MM-dd HH:mm:ss"/>)</h5>
                                          </c:if>
-                                         <c:if test="${review.reviewStar eq 3 }">
-                                            <h5 style="font-style: italic; color:lightblue;"> <i class="lar la-smile-wink la-2x" ></i> ${review.userId }</h5> <h5> (<fmt:formatDate value="${review.reviewDate }" pattern="yyyy-MM-dd HH:mm:ss"/>)</h5>
+                                         <c:if test="${review.review_star eq 3 }">
+                                            <h5 style="font-style: italic; color:lightblue;"> <i class="lar la-smile-wink la-2x" ></i> ${review.user_id }</h5> <h5> (<fmt:formatDate value="${review.review_date }" pattern="yyyy-MM-dd HH:mm:ss"/>)</h5>
                                          </c:if>
-                                         <c:if test="${review.reviewStar eq 4 }">
-                                            <h5 style="font-style: italic; color:lightblue;"> <i class="lar la-grin-squint la-2x"></i> ${review.userId }</h5> <h5> (<fmt:formatDate value="${review.reviewDate }" pattern="yyyy-MM-dd HH:mm:ss"/>)</h5>
+                                         <c:if test="${review.review_star eq 4 }">
+                                            <h5 style="font-style: italic; color:lightblue;"> <i class="lar la-grin-squint la-2x"></i> ${review.user_id }</h5> <h5> (<fmt:formatDate value="${review.review_date }" pattern="yyyy-MM-dd HH:mm:ss"/>)</h5>
                                          </c:if>
-                                         <c:if test="${review.reviewStar eq 5 }">
-                                            <h5 style="font-style: italic; color:lightblue;"> <i class="lar la-kiss-wink-heart la-2x"></i> ${review.userId }</h5> <h5> (<fmt:formatDate value="${review.reviewDate }" pattern="yyyy-MM-dd HH:mm:ss"/>)</h5>
+                                         <c:if test="${review.review_star eq 5 }">
+                                            <h5 style="font-style: italic; color:lightblue;"> <i class="lar la-kiss-wink-heart la-2x"></i> ${review.user_id }</h5> <h5> (<fmt:formatDate value="${review.review_date }" pattern="yyyy-MM-dd HH:mm:ss"/>)</h5>
                                          </c:if>
                                       </div>
                         

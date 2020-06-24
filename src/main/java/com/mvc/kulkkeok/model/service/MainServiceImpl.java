@@ -27,14 +27,14 @@ public class MainServiceImpl implements MainService{
 
 	@Override
 	public List<BestbeerDto> countReview() {
-		// TODO Auto-generated method stub
-		return null;
+		logger.info("[ MainService : countReview ]");
+		return dao.countReview();
 	}
 
 	@Override
 	public List<RecentReviewDto> getRecentReviewList() {
-		// TODO Auto-generated method stub
-		return null;
+		logger.info("[ MainService : getRecentReviewList ]");
+		return dao.getRecentReviewList();
 	}
 
 }

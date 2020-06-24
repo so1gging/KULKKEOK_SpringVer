@@ -2,65 +2,73 @@ package com.mvc.kulkkeok.model.dto;
 
 
 public class BeerStoryDto {
-   private int storyNo;
-   private String storyName;
-   private String storyLink;
-   private String storyImg;
+   private int story_no;
+   private String story_name;
+   private String story_link;
+   private String story_img;
    
    
    public BeerStoryDto() {
       
    }
 
-   public BeerStoryDto(int storyNo, String storyName, String storyLink, String storyImg) {
-      super();
-      this.storyNo = storyNo;
-      this.storyName = storyName;
-      this.storyLink = storyLink;
-      this.storyImg = storyImg;
-   }
 
-   public BeerStoryDto(int storyNo, String storyName, String storyLink) {
+public BeerStoryDto(int story_no, String story_name, String story_link, String story_img) {
 	super();
-	this.storyNo = storyNo;
-	this.storyName = storyName;
-	this.storyLink = storyLink;
-   }
+	this.story_no = story_no;
+	this.story_name = story_name;
+	this.story_link = story_link;
+	this.story_img = story_img;
+}
 
-   public int getStoryNo() {
-      return storyNo;
-   }
 
-   public void setStoryNo(int storyNo) {
-      this.storyNo = storyNo;
-   }
+public int getStory_no() {
+	return story_no;
+}
 
-   public String getStoryName() {
-      return storyName;
-   }
 
-   public void setStoryName(String storyName) {
-      this.storyName = storyName;
-   }
+public void setStory_no(int story_no) {
+	this.story_no = story_no;
+}
 
-   public String getStoryLink() {
-      return storyLink;
-   }
 
-   public void setStoryLink(String storyLink) {
-      this.storyLink = storyLink;
-   }
+public String getStory_name() {
+	return story_name;
+}
 
-   public String getStoryImg() {
-	return storyImg;
-   }
 
-   public void setStoryImg(String storyImg) {
-	this.storyImg = storyImg;
-   }
-   
-   
-   
+public void setStory_name(String story_name) {
+	this.story_name = story_name;
+}
+
+
+public String getStory_link() {
+	return story_link;
+}
+
+
+public void setStory_link(String story_link) {
+	this.story_link = story_link;
+}
+
+
+public String getStory_img() {
+	return story_img;
+}
+
+
+public void setStory_img(String story_img) {
+	this.story_img = story_img;
+}
+
+
+@Override
+public String toString() {
+	return "BeerStoryDto [story_no=" + story_no + ", story_name=" + story_name + ", story_link=" + story_link
+			+ ", story_img=" + story_img + "]";
+}
+
+
 
    
 }

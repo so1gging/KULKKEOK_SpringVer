@@ -6,8 +6,10 @@
 <configuration>
 	<!-- 별칭 설정 -->
 	<typeAliases>
+		<typeAlias type="com.mvc.kulkkeok.model.dto.UserDto" alias="UserDto"/>
 		<typeAlias type="com.mvc.kulkkeok.model.dto.BeerDto" alias="BeerDto"/>
 		<typeAlias type="com.mvc.kulkkeok.model.dto.BestbeerDto" alias="BeerbeerDto"/>
+		<typeAlias type="com.mvc.kulkkeok.model.dto.RecentReviewDto" alias="RecentReviewDto"/>
 	</typeAliases>
 
   

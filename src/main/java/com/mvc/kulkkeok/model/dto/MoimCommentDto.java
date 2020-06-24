@@ -4,93 +4,101 @@ import java.util.Date;
 
 public class MoimCommentDto {
 
-	private int mmNo;
-	private String mmContent;
-	private Date mmDate;
-	private int groupNo;
-	private int groupSq;
-	private String replyId;
-	private String userId;
-	private int moimNo;
+	private int mm_no;
+	private String mm_content;
+	private Date mm_date;
+	private int group_no;
+	private int group_sq;
+	private String reply_id;
+	private String user_id;
+	private int moim_no;
 	
 	public MoimCommentDto() {}
 
-	public MoimCommentDto(int mmNo, String mmContent, Date mmDate, int groupNo, int groupSq, String replyId, String userId,
-			int moimNo) {
+	public MoimCommentDto(int mm_no, String mm_content, Date mm_date, int group_no, int group_sq, String reply_id,
+			String user_id, int moim_no) {
 		super();
-		this.mmNo = mmNo;
-		this.mmContent = mmContent;
-		this.mmDate = mmDate;
-		this.groupNo = groupNo;
-		this.groupSq = groupSq;
-		this.replyId = replyId;
-		this.userId = userId;
-		this.moimNo = moimNo;
+		this.mm_no = mm_no;
+		this.mm_content = mm_content;
+		this.mm_date = mm_date;
+		this.group_no = group_no;
+		this.group_sq = group_sq;
+		this.reply_id = reply_id;
+		this.user_id = user_id;
+		this.moim_no = moim_no;
 	}
 
-	public int getMmNo() {
-		return mmNo;
+	public int getMm_no() {
+		return mm_no;
 	}
 
-	public void setMmNo(int mmNo) {
-		this.mmNo = mmNo;
+	public void setMm_no(int mm_no) {
+		this.mm_no = mm_no;
 	}
 
-	public String getMmContent() {
-		return mmContent;
+	public String getMm_content() {
+		return mm_content;
 	}
 
-	public void setMmContent(String mmContent) {
-		this.mmContent = mmContent;
+	public void setMm_content(String mm_content) {
+		this.mm_content = mm_content;
 	}
 
-	public Date getMmDate() {
-		return mmDate;
+	public Date getMm_date() {
+		return mm_date;
 	}
 
-	public void setMmDate(Date mmDate) {
-		this.mmDate = mmDate;
+	public void setMm_date(Date mm_date) {
+		this.mm_date = mm_date;
 	}
 
-	public int getGroupNo() {
-		return groupNo;
+	public int getGroup_no() {
+		return group_no;
 	}
 
-	public void setGroupNo(int groupNo) {
-		this.groupNo = groupNo;
+	public void setGroup_no(int group_no) {
+		this.group_no = group_no;
 	}
 
-	public int getGroupSq() {
-		return groupSq;
+	public int getGroup_sq() {
+		return group_sq;
 	}
 
-	public void setGroupSq(int groupSq) {
-		this.groupSq = groupSq;
+	public void setGroup_sq(int group_sq) {
+		this.group_sq = group_sq;
 	}
 
-	public String getReplyId() {
-		return replyId;
+	public String getReply_id() {
+		return reply_id;
 	}
 
-	public void setReplyId(String replyId) {
-		this.replyId = replyId;
+	public void setReply_id(String reply_id) {
+		this.reply_id = reply_id;
 	}
 
-	public String getUserId() {
-		return userId;
+	public String getUser_id() {
+		return user_id;
 	}
 
-	public void setUserId(String userId) {
-		this.userId = userId;
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
 	}
 
-	public int getMoimNo() {
-		return moimNo;
+	public int getMoim_no() {
+		return moim_no;
 	}
 
-	public void setMoimNo(int moimNo) {
-		this.moimNo = moimNo;
+	public void setMoim_no(int moim_no) {
+		this.moim_no = moim_no;
 	}
+
+	@Override
+	public String toString() {
+		return "MoimCommentDto [mm_no=" + mm_no + ", mm_content=" + mm_content + ", mm_date=" + mm_date + ", group_no="
+				+ group_no + ", group_sq=" + group_sq + ", reply_id=" + reply_id + ", user_id=" + user_id + ", moim_no="
+				+ moim_no + "]";
+	}
+
 	
 	
 
